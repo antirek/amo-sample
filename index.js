@@ -3,12 +3,26 @@ const qs = require('querystring');
 const express = require('express');
 const axios = require('axios');
 const jwt_decode = require('jwt-decode');
+const _ = require('lodash');
+const path = require('path');
+
+const client_id = 'c5e9efbe-33a8-48ec-9879-53000b074542';
+const redirect_uri = 'https://test2.services.mobilon.ru/';
+const client_secret = 'yKdq4UemoOgZanfuV2xi8UhlMYILH9SrVomsHAK4SGXOTSFcMu4DjOcLbG8HMIsz';
 
 const app = express();
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, '/views'));
 
 app.get('/', async (req, res) => {
+  console.log('req.query', req.query)
+  if (_.isEmpty(req.query)) {
+    console.log('no req.query');
+    res.render('button', {client_id});
+  } else {
+    res.send('OK');
+  }
 
-  res.send('Hello World!');
   //console.log(req, res);
   const myUrl = url.parse(req.originalUrl);
 
@@ -17,9 +31,6 @@ app.get('/', async (req, res) => {
 
   console.log('qs', params);
 
-  const client_id = 'c5e9efbe-33a8-48ec-9879-53000b074542';
-  const redirect_uri = 'https://test2.services.mobilon.ru/';
-  const client_secret = 'yKdq4UemoOgZanfuV2xi8UhlMYILH9SrVomsHAK4SGXOTSFcMu4DjOcLbG8HMIsz';
 
   const domain = params.referer;
 
