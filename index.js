@@ -6,9 +6,9 @@ const jwt_decode = require('jwt-decode');
 const _ = require('lodash');
 const path = require('path');
 
-const client_id = 'c5e9efbe-33a8-48ec-9879-53000b074542';
-const redirect_uri = 'https://test2.services.mobilon.ru/';
-const client_secret = 'yKdq4UemoOgZanfuV2xi8UhlMYILH9SrVomsHAK4SGXOTSFcMu4DjOcLbG8HMIsz';
+const client_id = '7a52e13e-9f60-4b0d-acff-cd6110bc6cb1';
+const redirect_uri = 'https://5862-93-159-240-241.eu.ngrok.io/';
+const client_secret = 'zaFqdaw9IJfJzYSlC04pXkWGu2JK7kVgM1GokyEzbFMcKQnaDNGzDZ1SRbIbtdsV';
 
 const app = express();
 app.set('view engine', 'pug');

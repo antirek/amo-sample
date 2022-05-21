@@ -2,15 +2,19 @@ html
   head
   body
     script.amocrm_oauth(
-      charset='utf-8' 
-      data-client-id='c5e9efbe-33a8-48ec-9879-53000b074542' 
-      data-title='Установить интеграцию' 
-      data-compact='false' 
-      data-class-name='className' 
-      data-color='default' 
-      data-state='state' 
-      data-error-callback='functionName' 
-      data-mode='popup' 
-      src='https://www.amocrm.ru/auth/button.min.js' 
-      data-error='access_denied'
+      charset="utf-8"
+      data-client-id=client_id
+      data-name="Интеграция"
+      data-description="Integration description"
+      data-redirect_uri="https://5862-93-159-240-241.eu.ngrok.io"
+      data-logo="https://example.com/amocrm_logo.png"
+      data-scopes="crm,notifications"
+      data-title="Установить интеграцию"
+      data-compact="false"
+      data-class-name="className"
+      data-color="default"
+      data-state="state"
+      data-error-callback="functionName"
+      data-mode="popup"
+      src="https://www.amocrm.ru/auth/button.min.js"
     )
